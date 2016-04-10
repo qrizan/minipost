@@ -1,0 +1,11 @@
+<div class="panel panel-info">
+	<div class="panel-body">
+		<%= simple_form_for @post do |f| %>
+		  <%= f.input :title, label: 'Title'  %>
+		  <%= f.select :category_id, @categories,{}, {:class => 'form-control'} %>
+		  <%= f.input :body, as: :text, :input_html => { :rows => 7 , :style => 'width: 100%'} %>
+		  <%= link_to "Back", post_path(@post), {:class => 'btn btn-sm btn-warning'} %>
+		  <%= f.button :submit, {:class => 'btn btn-sm btn-primary pull-right'} %>
+		<% end %>	
+	</div>
+</div>

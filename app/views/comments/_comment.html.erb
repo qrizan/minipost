@@ -1,0 +1,8 @@
+<div class="panel panel-warning">
+  	<div class="panel-body">
+  		<p><i><small><%= comment.message %></small></i></p>
+		<%= link_to '<i class="glyphicon glyphicon-edit"></i>'.html_safe, edit_post_comment_path(comment.post, comment)%>
+		<%= link_to '<i class="glyphicon glyphicon-trash"></i>'.html_safe, post_comment_path(comment.post, comment), method: :delete, data: {confirm: "Are you sure ?"}%>	  
+	</div>
+</div>
+

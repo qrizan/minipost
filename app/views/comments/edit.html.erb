@@ -1,0 +1,9 @@
+<div class="panel panel-info">
+	<div class="panel-body">
+		<%= simple_form_for([@post, @comment]) do |f|%>
+			<%= f.input :message , as: :text, :input_html => { :rows => 3 , :style => 'width: 100%'}%>
+			<%= link_to "Back", post_path(@post), {:class => 'btn btn-sm btn-warning'} %>
+			<%= f.button :submit, {:class => 'btn btn-sm btn-primary pull-right'} %>	
+		<% end %>
+	</div>
+</div>		
